@@ -1,0 +1,494 @@
+{
+  "users": [],
+  "tasteItems": [
+    {
+      "id": "m-001",
+      "type": "movie",
+      "name": "Interstellar",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-002",
+      "type": "movie",
+      "name": "Blade Runner 2049",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-003",
+      "type": "movie",
+      "name": "Ex Machina",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-004",
+      "type": "movie",
+      "name": "The Matrix",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-005",
+      "type": "movie",
+      "name": "Arrival",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "m-006",
+      "type": "movie",
+      "name": "Get Out",
+      "genre": "Horror",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-007",
+      "type": "movie",
+      "name": "Hereditary",
+      "genre": "Horror",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-008",
+      "type": "movie",
+      "name": "The Conjuring",
+      "genre": "Horror",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-009",
+      "type": "movie",
+      "name": "A Quiet Place",
+      "genre": "Horror",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-010",
+      "type": "movie",
+      "name": "It",
+      "genre": "Horror",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "m-011",
+      "type": "movie",
+      "name": "The Dark Knight",
+      "genre": "Action",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-012",
+      "type": "movie",
+      "name": "John Wick",
+      "genre": "Action",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-013",
+      "type": "movie",
+      "name": "Mad Max: Fury Road",
+      "genre": "Action",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-014",
+      "type": "movie",
+      "name": "Gladiator",
+      "genre": "Action",
+      "coverUrl": ""
+    },
+    {
+      "id": "m-015",
+      "type": "movie",
+      "name": "Mission: Impossible - Fallout",
+      "genre": "Action",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "s-001",
+      "type": "show",
+      "name": "Breaking Bad",
+      "genre": "Drama",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-002",
+      "type": "show",
+      "name": "Better Call Saul",
+      "genre": "Drama",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-003",
+      "type": "show",
+      "name": "Succession",
+      "genre": "Drama",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-004",
+      "type": "show",
+      "name": "The Crown",
+      "genre": "Drama",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-005",
+      "type": "show",
+      "name": "The Wire",
+      "genre": "Drama",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "s-006",
+      "type": "show",
+      "name": "Black Mirror",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-007",
+      "type": "show",
+      "name": "Dark",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-008",
+      "type": "show",
+      "name": "Stranger Things",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-009",
+      "type": "show",
+      "name": "The Expanse",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+    {
+      "id": "s-010",
+      "type": "show",
+      "name": "Severance",
+      "genre": "Sci-Fi",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "g-001",
+      "type": "game",
+      "name": "The Witcher 3",
+      "genre": "RPG",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-002",
+      "type": "game",
+      "name": "Elden Ring",
+      "genre": "RPG",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-003",
+      "type": "game",
+      "name": "Skyrim",
+      "genre": "RPG",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-004",
+      "type": "game",
+      "name": "Cyberpunk 2077",
+      "genre": "RPG",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-005",
+      "type": "game",
+      "name": "Baldur's Gate 3",
+      "genre": "RPG",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+
+    {
+      "id": "g-006",
+      "type": "game",
+      "name": "Fortnite",
+      "genre": "Shooter",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-007",
+      "type": "game",
+      "name": "Apex Legends",
+      "genre": "Shooter",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-008",
+      "type": "game",
+      "name": "Call of Duty: Warzone",
+      "genre": "Shooter",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-009",
+      "type": "game",
+      "name": "Overwatch 2",
+      "genre": "Shooter",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-010",
+      "type": "game",
+      "name": "Rainbow Six Siege",
+      "genre": "Shooter",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+
+    {
+      "id": "g-011",
+      "type": "game",
+      "name": "FIFA 24",
+      "genre": "Sports",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-012",
+      "type": "game",
+      "name": "NBA 2K24",
+      "genre": "Sports",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-013",
+      "type": "game",
+      "name": "Forza Horizon 5",
+      "genre": "Sports",
+      "platforms": ["PC", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-014",
+      "type": "game",
+      "name": "EA Sports UFC 5",
+      "genre": "Sports",
+      "platforms": ["Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-015",
+      "type": "game",
+      "name": "Tony Hawk's Pro Skater 1+2",
+      "genre": "Sports",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+
+    {
+      "id": "g-016",
+      "type": "game",
+      "name": "Stardew Valley",
+      "genre": "Indie",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-017",
+      "type": "game",
+      "name": "Hades",
+      "genre": "Indie",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-018",
+      "type": "game",
+      "name": "Hollow Knight",
+      "genre": "Indie",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-019",
+      "type": "game",
+      "name": "Celeste",
+      "genre": "Indie",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+    {
+      "id": "g-020",
+      "type": "game",
+      "name": "Dead Cells",
+      "genre": "Indie",
+      "platforms": ["PC", "Play Station", "Xbox"],
+      "coverUrl": ""
+    },
+
+    {
+      "id": "a-001",
+      "type": "artist",
+      "name": "The Weeknd",
+      "genre": "Pop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-002",
+      "type": "artist",
+      "name": "Dua Lipa",
+      "genre": "Pop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-003",
+      "type": "artist",
+      "name": "Taylor Swift",
+      "genre": "Pop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-004",
+      "type": "artist",
+      "name": "Ariana Grande",
+      "genre": "Pop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-005",
+      "type": "artist",
+      "name": "Harry Styles",
+      "genre": "Pop",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "a-006",
+      "type": "artist",
+      "name": "Drake",
+      "genre": "Hip-Hop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-007",
+      "type": "artist",
+      "name": "Kendrick Lamar",
+      "genre": "Hip-Hop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-008",
+      "type": "artist",
+      "name": "Travis Scott",
+      "genre": "Hip-Hop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-009",
+      "type": "artist",
+      "name": "J. Cole",
+      "genre": "Hip-Hop",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-010",
+      "type": "artist",
+      "name": "Eminem",
+      "genre": "Hip-Hop",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "a-011",
+      "type": "artist",
+      "name": "Metallica",
+      "genre": "Rock",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-012",
+      "type": "artist",
+      "name": "Arctic Monkeys",
+      "genre": "Rock",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-013",
+      "type": "artist",
+      "name": "Foo Fighters",
+      "genre": "Rock",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-014",
+      "type": "artist",
+      "name": "Muse",
+      "genre": "Rock",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-015",
+      "type": "artist",
+      "name": "Linkin Park",
+      "genre": "Rock",
+      "coverUrl": ""
+    },
+
+    {
+      "id": "a-016",
+      "type": "artist",
+      "name": "Daft Punk",
+      "genre": "Electronic",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-017",
+      "type": "artist",
+      "name": "Calvin Harris",
+      "genre": "Electronic",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-018",
+      "type": "artist",
+      "name": "David Guetta",
+      "genre": "Electronic",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-019",
+      "type": "artist",
+      "name": "Skrillex",
+      "genre": "Electronic",
+      "coverUrl": ""
+    },
+    {
+      "id": "a-020",
+      "type": "artist",
+      "name": "Avicii",
+      "genre": "Electronic",
+      "coverUrl": ""
+    }
+  ],
+  "userTastes": [],
+  "likes": []
+}
