@@ -1,5 +1,7 @@
 
-console.log("🔥 THIS APP.JS IS RUNNING 🔥");
+console.log("🔥 APP RECEIVED A REQUEST 🔥");
+
+
 
 
 

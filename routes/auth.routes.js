@@ -18,7 +18,13 @@ const saltRounds = 10;
 
 // POST /auth/signup  - Creates a new user in the database
 router.post("/signup", (req, res, next) => {
+  console.log("REQ.BODY:", req.body);
+
   const { email, password, name } = req.body;
+
+
+  console.log("LOGIN ATTEMPT:", email, password);
+
 
   // Check if email or password or name are provided as empty strings
   if (email === "" || password === "" || name === "") {
@@ -45,12 +51,13 @@ router.post("/signup", (req, res, next) => {
 
   // Check the users collection if a user with the same email already exists
   User.findOne({ email })
-    .then((foundUser) => {
-      // If the user with the same email already exists, send an error response
-      if (foundUser) {
-        res.status(400).json({ message: "User already exists." });
-        return;
-      }
+  .then((foundUser) => {
+    if (foundUser) {
+      console.log("SIGNUP FAILED: user already exists");
+      res.status(400).json({ message: "User already exists." });
+      return;
+    }
+
 
       // If email is unique, proceed to hash the password
       const salt = bcrypt.genSaltSync(saltRounds);
