@@ -35,6 +35,12 @@ app.use("/api/auth", authRoutes);
 const userTastesRoutes = require("./routes/user-tastes.routes");
 app.use("/api/user-tastes", userTastesRoutes);
 
+const likesRoutes = require("./routes/likes.routes");
+app.use("/api/likes", likesRoutes);
+
+const chatsRoutes = require("./routes/chats.routes");
+app.use("/api/chats", chatsRoutes);
+
 // 6️⃣ Error handling (LAST)
 require("./error-handling")(app);
 
