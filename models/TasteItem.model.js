@@ -21,3 +21,4 @@ const tasteItemSchema = new mongoose.Schema(
 const TasteItem = mongoose.model("TasteItem", tasteItemSchema);
 
 module.exports = TasteItem;
+
