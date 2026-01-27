@@ -45,6 +45,11 @@ app.use("/api/users", usersRoutes);
 const userLikesRoutes = require("./routes/user-likes.routes");
 app.use("/api/user-likes", userLikesRoutes);
 
+const matchesRoutes = require("./routes/matches.routes");
+app.use("/api/matches", matchesRoutes);
+
+
+
 
 
 

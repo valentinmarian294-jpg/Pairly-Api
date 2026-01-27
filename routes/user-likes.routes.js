@@ -96,10 +96,16 @@ router.delete("/:userId", isAuthenticated, async (req, res, next) => {
     const toUser = req.params.userId;
 
     await UserLike.findOneAndDelete({ fromUser, toUser });
+
+    await Match.findOneAndDelete({
+      users: { $all: [fromUser, toUser] },
+    });
+
     res.status(204).send();
   } catch (err) {
     next(err);
   }
 });
+
 
 module.exports = router;
