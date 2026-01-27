@@ -10,7 +10,7 @@ const tasteItemSchema = new mongoose.Schema(
     category: {
       type: String,
       required: true,
-      enum: ["movie", "show", "game", "music"]
+      enum: ["movie", "show", "game", "artist"]
     }
   },
   {

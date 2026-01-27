@@ -32,8 +32,16 @@ app.use("/api", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/api/auth", authRoutes);
 
+const tasteItemsRoutes = require("./routes/taste-items.routes");
+app.use("/api/taste-items", tasteItemsRoutes);
+
+
 const userTastesRoutes = require("./routes/user-tastes.routes");
 app.use("/api/user-tastes", userTastesRoutes);
+
+const usersRoutes = require("./routes/users.routes");
+app.use("/api/users", usersRoutes);
+
 
 // 6️⃣ Error handling (LAST)
 require("./error-handling")(app);
