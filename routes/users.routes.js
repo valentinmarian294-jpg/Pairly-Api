@@ -17,6 +17,23 @@ router.get("/discover", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+// GET /api/users/profile
+router.get("/profile", isAuthenticated, async (req, res, next) => {
+  try {
+    const userId = req.payload._id;
+
+    const user = await User.findById(userId).select("-password");
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+});
+
 
 // GET /api/users/:id
 router.get("/:id", isAuthenticated, async (req, res, next) => {
