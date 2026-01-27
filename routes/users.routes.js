@@ -17,6 +17,23 @@ router.get("/discover", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+
+// GET /api/users/:id
+router.get("/:id", isAuthenticated, async (req, res, next) => {
+  try {
+    const user = await User.findById(req.params.id).select("-password");
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.status(200).json(user);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// PUT /api/users/profile
 router.put("/profile", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
@@ -37,6 +54,5 @@ router.put("/profile", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
-
 
 module.exports = router;
