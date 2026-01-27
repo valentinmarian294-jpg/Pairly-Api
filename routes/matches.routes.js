@@ -4,15 +4,15 @@ const { isAuthenticated } = require("../middleware/jwt.middleware");
 
 router.get("/me", isAuthenticated, async (req, res, next) => {
   try {
-    const userId = req.payload._id;
+    const currentUserId = req.payload._id.toString();
 
     const matches = await Match.find({
-      users: userId,
+      users: currentUserId,
     }).populate("users", "-password");
 
-    const formatted = matches.map((match) => {
+    const formattedMatches = matches.map((match) => {
       const otherUser = match.users.find(
-        (u) => u._id.toString() !== userId
+        (u) => u._id.toString() !== currentUserId
       );
 
       return {
@@ -22,7 +22,7 @@ router.get("/me", isAuthenticated, async (req, res, next) => {
       };
     });
 
-    res.status(200).json(formatted);
+    res.status(200).json(formattedMatches);
   } catch (err) {
     next(err);
   }
