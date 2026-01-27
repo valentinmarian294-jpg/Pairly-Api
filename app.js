@@ -42,6 +42,11 @@ app.use("/api/user-tastes", userTastesRoutes);
 const usersRoutes = require("./routes/users.routes");
 app.use("/api/users", usersRoutes);
 
+const userLikesRoutes = require("./routes/user-likes.routes");
+app.use("/api/user-likes", userLikesRoutes);
+
+
+
 
 // 6️⃣ Error handling (LAST)
 require("./error-handling")(app);
