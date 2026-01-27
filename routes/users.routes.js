@@ -32,6 +32,24 @@ router.get("/:id", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+const UserTaste = require("../models/UserTaste.model");
+
+/*
+  GET /api/users/:id/tastes
+*/
+router.get("/:id/tastes", isAuthenticated, async (req, res, next) => {
+  try {
+    const userId = req.params.id;
+
+    const tastes = await UserTaste.find({ user: userId })
+      .populate("tasteItem");
+
+    res.status(200).json(tastes);
+  } catch (err) {
+    next(err);
+  }
+});
+
 
 // PUT /api/users/profile
 router.put("/profile", isAuthenticated, async (req, res, next) => {
