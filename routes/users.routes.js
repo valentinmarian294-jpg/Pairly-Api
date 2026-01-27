@@ -17,5 +17,26 @@ router.get("/discover", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+router.put("/profile", isAuthenticated, async (req, res, next) => {
+  try {
+    const userId = req.payload._id;
+    const { age, bio, image } = req.body;
+
+    if (!age) {
+      return res.status(400).json({ message: "Age is required" });
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(
+      userId,
+      { age, bio, image },
+      { new: true, runValidators: true }
+    ).select("-password");
+
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    next(err);
+  }
+});
+
 
 module.exports = router;
