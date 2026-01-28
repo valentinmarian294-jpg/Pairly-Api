@@ -72,15 +72,16 @@ router.get("/:id/tastes", isAuthenticated, async (req, res, next) => {
 router.put("/profile", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
-    const { age, bio, image } = req.body;
-
-    if (!age) {
-      return res.status(400).json({ message: "Age is required" });
-    }
+    const { name, age, bio, image } = req.body;
 
     const updatedUser = await User.findByIdAndUpdate(
       userId,
-      { age, bio, image },
+      {
+        ...(name && { name }),
+        ...(age && { age }),
+        ...(bio !== undefined && { bio }),
+        ...(image !== undefined && { image }),
+      },
       { new: true, runValidators: true }
     ).select("-password");
 
@@ -89,5 +90,6 @@ router.put("/profile", isAuthenticated, async (req, res, next) => {
     next(err);
   }
 });
+
 
 module.exports = router;
