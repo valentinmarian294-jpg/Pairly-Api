@@ -3,9 +3,6 @@ const UserLike = require("../models/UserLike.model");
 const Match = require("../models/Match.model");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
 
-/*
-  GET USERS I LIKED
-*/
 router.get("/sent/me", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
@@ -19,9 +16,6 @@ router.get("/sent/me", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/*
-  GET USERS WHO LIKED ME
-*/
 router.get("/received/me", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
@@ -35,9 +29,6 @@ router.get("/received/me", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/*
-  CREATE LIKE
-*/
 router.post("/:userId", isAuthenticated, async (req, res, next) => {
   try {
     const fromUser = req.payload._id;
@@ -87,9 +78,6 @@ res.status(201).json({
   }
 });
 
-/*
-  REMOVE LIKE
-*/
 router.delete("/:userId", isAuthenticated, async (req, res, next) => {
   try {
     const fromUser = req.payload._id;

@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const TasteItem = require("../models/TasteItem.model");
 
-// GET all taste items
 router.get("/", async (req, res, next) => {
   try {
     const items = await TasteItem.find();

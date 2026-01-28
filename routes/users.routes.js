@@ -3,9 +3,6 @@ const User = require("../models/User.model");
 const UserTaste = require("../models/UserTaste.model");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
 
-/* ======================================================
-   GET /api/users/discover
-====================================================== */
 router.get("/discover", isAuthenticated, async (req, res, next) => {
   try {
     const currentUserId = req.payload._id;
@@ -21,9 +18,6 @@ router.get("/discover", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/* ======================================================
-   GET /api/users/profile   ✅ CURRENT USER (FIXED)
-====================================================== */
 router.get("/profile", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
@@ -42,9 +36,6 @@ router.get("/profile", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/* ======================================================
-   PUT /api/users/profile   ✅ UPDATE PROFILE (FIXED)
-====================================================== */
 router.put("/profile", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
@@ -75,9 +66,6 @@ router.put("/profile", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/* ======================================================
-   GET /api/users/:id/tastes
-====================================================== */
 router.get("/:id/tastes", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.params.id;
@@ -90,9 +78,6 @@ router.get("/:id/tastes", isAuthenticated, async (req, res, next) => {
   }
 });
 
-/* ======================================================
-   GET /api/users/:id   ⚠️ MUST BE LAST
-====================================================== */
 router.get("/:id", isAuthenticated, async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id).select("-password");

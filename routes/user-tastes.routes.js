@@ -13,17 +13,14 @@ router.post("/", isAuthenticated, async (req, res, next) => {
     const userId = req.payload._id;
     const { tasteItemId } = req.body;
 
-    // 1️⃣ Required field check
     if (!tasteItemId) {
       return res.status(400).json({ message: "tasteItemId is required" });
     }
 
-    // 2️⃣ ObjectId validation (MUST COME BEFORE ANY QUERY)
     if (!mongoose.Types.ObjectId.isValid(tasteItemId)) {
       return res.status(400).json({ message: "Invalid tasteItemId" });
     }
 
-    // 3️⃣ Duplicate prevention
     const existingUserTaste = await UserTaste.findOne({
       user: userId,
       tasteItem: tasteItemId,
@@ -33,7 +30,6 @@ router.post("/", isAuthenticated, async (req, res, next) => {
       return res.status(409).json({ message: "Taste already selected" });
     }
 
-    // 4️⃣ Create link
     const newUserTaste = await UserTaste.create({
       user: userId,
       tasteItem: tasteItemId,
