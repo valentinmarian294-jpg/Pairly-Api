@@ -1,4 +1,5 @@
-console.log("🔥 APP RECEIVED A REQUEST 🔥");
+
+console.log("APP RECEIVED A REQUEST");
 
 require("dotenv").config();
 console.log("TOKEN_SECRET:", process.env.TOKEN_SECRET);
@@ -36,5 +37,12 @@ app.use("/api/matches", matchesRoutes);
 
 
 require("./error-handling")(app);
+app.use((err, req, res, next) => {
+  if (err.name === "UnauthorizedError") {
+    return res.status(401).json({ message: "Invalid or missing token" });
+  }
+  console.error(err);
+  res.status(500).json({ message: "Internal Server Error" });
+});
 
 module.exports = app;

@@ -11,7 +11,11 @@ const userTasteSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "TasteItem",
       required: true
-    }
+    },
+    bio: {
+      type: String,
+      required: [true, "Bio is require."],
+    },
   },
   {
     timestamps: true

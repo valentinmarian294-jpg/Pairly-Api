@@ -55,6 +55,18 @@ router.get("/", isAuthenticated, async (req, res, next) => {
   }
 });
 
+router.get("/", isAuthenticated, async (req, res, next) => {
+  try {
+    const user = await User.findById(req.payload._id)
+      .select("-password")
+      .populate("tastes");
+
+    res.json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
 router.delete("/:id", isAuthenticated, async (req, res, next) => {
   try {
     const userId = req.payload._id;
