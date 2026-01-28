@@ -10,7 +10,7 @@ const tasteItemSchema = new mongoose.Schema(
     category: {
       type: String,
       required: true,
-      enum: ["movie", "show", "game", "music"]
+      enum: ["movie", "show", "game", "artist"]
     }
   },
   {
@@ -21,3 +21,4 @@ const tasteItemSchema = new mongoose.Schema(
 const TasteItem = mongoose.model("TasteItem", tasteItemSchema);
 
 module.exports = TasteItem;
+

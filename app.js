@@ -24,17 +24,26 @@ app.use("/api", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/api/auth", authRoutes);
 
+const tasteItemsRoutes = require("./routes/taste-items.routes");
+app.use("/api/taste-items", tasteItemsRoutes);
+
+
 const userTastesRoutes = require("./routes/user-tastes.routes");
 app.use("/api/user-tastes", userTastesRoutes);
 
-const usersRoutes = require("./routes/user.routes");
+const usersRoutes = require("./routes/users.routes");
 app.use("/api/users", usersRoutes);
 
-const likesRoutes = require("./routes/likes.routes");
-app.use("/api/likes", likesRoutes);
+const userLikesRoutes = require("./routes/user-likes.routes");
+app.use("/api/user-likes", userLikesRoutes);
 
-const chatsRoutes = require("./routes/chats.routes");
-app.use("/api/chats", chatsRoutes);
+const matchesRoutes = require("./routes/matches.routes");
+app.use("/api/matches", matchesRoutes);
+
+
+
+
+
 
 // 6️⃣ Error handling (LAST)
 require("./error-handling")(app);
