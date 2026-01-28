@@ -13,7 +13,11 @@ const cookieParser = require("cookie-parser");
 // unless the request is made from the same domain, by default express wont accept POST requests
 const cors = require("cors");
 
-const FRONTEND_URL = process.env.ORIGIN || "http://localhost:5173";
+const FRONTEND_URLS = [
+  "http://localhost:5173", 
+  "http://localhost:4173", 
+  process.env.ORIGIN,      
+].filter(Boolean);
 
 
 // Middleware configuration
@@ -24,10 +28,11 @@ module.exports = (app) => {
 
   // controls a very specific header to pass headers from the frontend
   app.use(
-    cors({
-      origin: [FRONTEND_URL],
-    })
-  );
+  cors({
+    origin: FRONTEND_URLS,
+    credentials: true,
+  })
+);
 
   // In development environment the app logs
   app.use(logger("dev"));
